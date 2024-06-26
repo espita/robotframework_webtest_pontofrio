@@ -6,6 +6,7 @@ log.html
 # Logs e relatórios gerados pelo Robot Framework
 logs/
 results/
+reports/
 
 # Virtual environments do Python
 .DS_Store

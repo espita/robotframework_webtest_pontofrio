@@ -61,12 +61,12 @@ Aplicar Filtro de Preço
     [Documentation]    Aplica um filtro de preço no site
     Sleep    2s
     Scroll Element Into View            xpath=//input[contains(@id, 'Preço - De R$ 600 até R$ 999')]
-    Page Should Contain Element         xpath=//input[contains(@id, 'Preço - De R$ 600 até R$ 999')]    timeout=30s
+    Page Should Contain Element         xpath=//input[contains(@id, 'Preço - De R$ 600 até R$ 999')]
     ${is_visible} =    Execute JavaScript    return document.querySelector("input[id*='Preço - De R$ 600 até R$ 999']") !== null && document.querySelector("input[id*='Preço - De R$ 600 até R$ 999']").offsetHeight > 0;
-    Should Be True    ${is_visible}    timeout=30s
+    Should Be True    ${is_visible}
     Execute JavaScript    document.querySelector("input[id*='Preço - De R$ 600 até R$ 999']").click();
     Sleep    3s
-    Wait Until Page Contains Element    css:h3.product-card__title    timeout=30s
+    Wait Until Page Contains Element    css:h3.product-card__title
     
 Verificar Lista de Produtos Filtrados Por Preço
     [Arguments]    ${precoMinimo}    ${precoMaximo}

@@ -32,26 +32,26 @@ Abrir Página de Detalhes do Produto
 
 Clicar no Botão "Comprar"
     [Documentation]    Clica no botão "Comprar" na página de detalhes do produto
-    Wait Until Element Is Visible    id:buy-button    timeout=15s
+    Wait Until Element Is Visible    id:buy-button    
     Click Element    id:buy-button
 
 Verificar Produto Adicionado ao Carrinho
     [Documentation]    Verifica se o produto foi adicionado corretamente ao carrinho
-    Wait Until Element Is Visible    css:.dsvia-heading.css-af5b0r    timeout=15s
+    Wait Until Element Is Visible    css:.dsvia-heading.css-af5b0r   
     Element Text Should Be    css:.dsvia-heading.css-af5b0r    Controle Xbox Series Carbon Black
 
 Abrir Carrinho de Compras
     [Documentation]    Abre o carrinho de compras
     Scroll Element Into View    ${CARRINHO_LOCATOR}
-    Wait Until Element Is Visible    ${CARRINHO_LOCATOR}    timeout=10s
+    Wait Until Element Is Visible    ${CARRINHO_LOCATOR}    
     Click Element    ${CARRINHO_LOCATOR}
-    Wait Until Page Contains Element    ${QUANTIDADE_LOCATOR}    timeout=10s
+    Wait Until Page Contains Element    ${QUANTIDADE_LOCATOR}    
 
 Remover Produto do Carrinho
     [Documentation]    Remove um produto específico do carrinho
-    Wait Until Element Is Visible    ${REMOVER_BOTAO_LOCATOR}    timeout=10s
+    Wait Until Element Is Visible    ${REMOVER_BOTAO_LOCATOR}    
     Click Element    ${REMOVER_BOTAO_LOCATOR}
-    Wait Until Element Is Visible    ${REMOVER_MENSAGEM_LOCATOR}    timeout=10s
+    Wait Until Element Is Visible    ${REMOVER_MENSAGEM_LOCATOR}   
 
 Verificar Carrinho Atualizado
     [Documentation]    Verifica se o carrinho foi atualizado corretamente após remover um produto
@@ -60,7 +60,7 @@ Verificar Carrinho Atualizado
 Alterar Quantidade de Produto no Carrinho
     [Arguments]    ${quantidade}
     ${quantidade_locator}=    Set Variable    xpath://select[@data-qa='item-quantity']
-    Wait Until Element Is Visible    ${quantidade_locator}    timeout=15s
+    Wait Until Element Is Visible    ${quantidade_locator}    
     Set Focus To Element    ${quantidade_locator}
     Select From List By Value    ${quantidade_locator}    ${quantidade}
     Wait Until Element Is Visible    ${quantidade_locator}       ${quantidade} 
