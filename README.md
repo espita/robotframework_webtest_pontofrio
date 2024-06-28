@@ -16,18 +16,19 @@ https://www.pontofrio.com.br/. <br>
 ```python --version``` <br>
 ```pip --version``` <br>
 
-- Instale o Robot Framework. <br`
-```pip install robotframework``` <br`
-- Para validar versão instaladas no termina`: <br>
+- Instale o Robot Framework. <br>
+```pip install robotframework```  <br>
+- Para validar versão instaladas no terminal: <br>
 ```robot --version``` <br>
 
 - Download do Geckodriver:  https://github.com/mozilla/geckodriver/releases
 - Download do chrome driver https://chromedriver.chromium.org/downloads
 - Salvar ambos os arquivos executáveis (geckodriver e chrome driver), dentro da pasta scripts onde foi instalado o Python na sua máquina. <br>
 
-- Download do Selenium Library: ```pip install robotframework-seleniumlibrary`` <br>`
 
-`
+- Download do Selenium Library: ```pip install robotframework-seleniumlibrary``` <br>
+
+
 ### 🛠️ Executando os Testes <br>
 - Para executar a Suite de testes e salvar o report em uma pasta separada, use os comandos: <br>
 
